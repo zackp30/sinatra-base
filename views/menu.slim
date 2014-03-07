@@ -1,0 +1,19 @@
+#menu.menu
+  .menubox2
+    .menubox3
+      .menubox4
+        .menuitems
+          - ['Home', 'About'].each do |p|
+            - if p != request.path_info
+              | <a href="/#{p.downcase}">#{p}</a>
+            - else
+              | #{p}
+  .click_for_menu
+    | Menu
+
+
+  /.menuitems
+    /a href="/" Home  
+    /a href="/staff" Staff  
+    /a href="/about" About  
+    /a href="/images" Images  
